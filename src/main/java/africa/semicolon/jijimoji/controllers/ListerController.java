@@ -6,6 +6,7 @@ import africa.semicolon.jijimoji.exceptions.JijimojiException;
 import africa.semicolon.jijimoji.services.ListerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +23,11 @@ public class ListerController {
         catch (JijimojiException exception){
             return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
         }
+    }
+
+    @GetMapping("/")
+    public String hello() {
+        return "This tutorial is the best. All hail the great Kristijan.";
     }
 }
 
