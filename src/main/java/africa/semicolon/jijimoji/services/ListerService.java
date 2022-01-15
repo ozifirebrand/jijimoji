@@ -5,4 +5,5 @@ import africa.semicolon.jijimoji.dtos.responses.RegisterListerResponse;
 
 public interface ListerService {
     public RegisterListerResponse registerLister(RegisterListerRequest request);
+    public void deleteListerById(String id);
 }
