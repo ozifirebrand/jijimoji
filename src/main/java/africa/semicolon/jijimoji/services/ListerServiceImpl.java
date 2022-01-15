@@ -24,4 +24,9 @@ public class ListerServiceImpl implements ListerService {
         Lister savedLister = listerRepository.save(lister);
         return ModelMapper.map(savedLister);
     }
+
+    @Override
+    public void deleteListerById(String id) {
+
+    }
 }
